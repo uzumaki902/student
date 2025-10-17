@@ -1,0 +1,33 @@
+:root{
+  --max-width: 980px;
+  --accent: #2b87f0;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --border: #e6e9ee;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;max-width:var(--max-width);margin:20px auto;padding:0 16px;background:var(--bg);color:#0f172a}
+h1{margin:0 0 8px 0}
+#apiRoot{color:var(--muted)}
+
+form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:8px;margin-top:12px}
+input[type=number],button{padding:8px;border-radius:6px;border:1px solid var(--border);font-size:14px}
+input[type=number]:focus,button:focus{outline:2px solid rgba(43,135,240,0.15)}
+button{background:var(--accent);color:#fff;border:none;cursor:pointer}
+button[aria-pressed="true"]{opacity:0.9}
+
+table{width:100%;border-collapse:collapse;margin-top:12px;background:var(--surface);border-radius:8px;overflow:hidden}
+th,td{padding:10px;border-bottom:1px solid var(--border);text-align:left}
+th{background:#f1f5f9;color:#0f172a;font-weight:600}
+tr:nth-child(even) td{background:#ffffff}
+.actions button{margin-right:6px;background:#f3f4f6;color:#111;border:1px solid #e6e9ee;padding:6px 8px}
+.actions button:hover{filter:brightness(0.95)}
+
+.summary{margin-top:12px;color:var(--muted)}
+
+@media (max-width:600px){
+  form{grid-template-columns:1fr;}
+  .actions button{display:block;margin-bottom:6px}
+}

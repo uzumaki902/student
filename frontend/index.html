@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Student Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Student Management</h1>
+  <p>API root: <span id="apiRoot"></span></p>
+
+  <form id="addForm">
+    <input id="number_courses" type="number" placeholder="Number of courses" required min="0">
+    <input id="time_study" type="number" placeholder="Time study (hrs)" required min="0">
+    <input id="Marks" type="number" placeholder="Marks" required min="0" max="100">
+    <div>
+      <button type="submit">Add Student</button>
+      <button type="button" id="refreshBtn">Refresh</button>
+    </div>
+  </form>
+
+  <div class="summary">
+    <strong>Summary:</strong>
+    <span id="count">0</span> students — Avg: <span id="avg">0</span>, Min: <span id="min">0</span>, Max: <span id="max">0</span>
+  </div>
+
+  <table id="studentsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Courses</th>
+        <th>Time Study</th>
+        <th>Marks</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <template id="rowTpl">
+    <tr>
+      <td class="id"></td>
+      <td class="number_courses"></td>
+      <td class="time_study"></td>
+      <td class="Marks"></td>
+      <td class="actions"></td>
+    </tr>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
